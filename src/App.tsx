@@ -1,12 +1,9 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
-import Card from './card.tsx'
+import Card from './Card.tsx'
+import Card2 from './Card2.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
@@ -16,7 +13,8 @@ function App() {
         <Card />
         <Card />
         <Card />
-        </div>s
+        <Card2 />
+      </div>
     </>
       
   )
