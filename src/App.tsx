@@ -1,6 +1,7 @@
 import './App.css'
 import Card from './Card.tsx'
 import Card2 from './Card2.tsx'
+import Card3 from './Card3.tsx'
 
 function App() {
   
@@ -11,9 +12,9 @@ function App() {
     
        <div className="card-container">
         <Card />
-        <Card />
-        <Card />
         <Card2 />
+        <Card3 />
+
       </div>
     </>
       
