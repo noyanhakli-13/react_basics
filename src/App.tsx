@@ -1,23 +1,17 @@
-import './App.css'
-import Card from './Card.tsx'
-import Card2 from './Card2.tsx'
-import Card3 from './Card3.tsx'
+import Card from './Card'
+import styles from './Card.module.css'
 
 function App() {
-  
-
   return (
-    <>
-    <h1>Willkommen</h1>
-    
-       <div className="card-container">
-        <Card />
-        <Card2 />
-        <Card3 />
-
-      </div>
-    </>
-      
+    <div>
+      <h1>KADER</h1>
+      <main className={styles.container}>
+        <Card name="Hakan" Position="Stürmer" Spiele={10} Tore={0} />
+        <Card name="Berke" Position="Mittelfeld" Spiele={10} Tore={5} />
+        <Card name="Noyan" Position="Verteidiger" Spiele={15} Tore={10}/>
+        <Card name="Can" Position="Torwart" Spiele={8} Tore={0} />
+      </main>
+    </div>
   )
 }
 
