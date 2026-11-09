@@ -5,13 +5,15 @@ type Props = {
   name: string
   Position: string
   image: string
+  rating: number
 }
 
-export default function Card({ name, Position, image }: Props) {
+export default function Card({ name, Position, image, rating }: Props) {
   const [isInSquad, setIsInSquad] = useState(false)
+  const [currentRating, setCurrentRating] = useState(rating) // Speichert das Rating und ermöglicht, es zu ändern.
 
-  const spiele = Math.floor(Math.random() * 100)
-  const tore = Math.floor(Math.random() * 30)
+  const [spiele] = useState(() => Math.floor(Math.random() * 100))
+  const [tore] = useState(() => Math.floor(Math.random() * 30)) // die daten werden nur beim neuladen der seite geändert
 
   return (
     <article className={styles.card}>
@@ -21,6 +23,16 @@ export default function Card({ name, Position, image }: Props) {
       <p>{Position}</p>
       <p>Spiele: {spiele}</p>
       <p>Tore: {tore}</p>
+
+      <p>Rating: {currentRating}</p>
+
+      <button onClick={() => setCurrentRating(Math.min(10, currentRating + 1))}>
+        +
+      </button>
+
+      <button onClick={() => setCurrentRating(Math.max(0, currentRating - 1))}>
+        -
+      </button>
 
       <button
         className={isInSquad ? styles.selected : ''}
