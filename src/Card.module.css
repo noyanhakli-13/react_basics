@@ -1,21 +1,45 @@
 .container {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
   flex-wrap: wrap;
-  align-items: stretch;
-  gap: 20px;
 }
 
 .card {
-  box-sizing: border-box;
-  flex: 0 1 260px;
-  padding: 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
-  transition: background-color 160ms ease;
+  width: 220px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #1d4ed8; 
 }
 
 .selected {
-  background: #bbf7d0;
+  background-color: green !important;  /* important damit die grüne Farbe Vorrang hat vor der weißen Hintergrundfarbe */
 }
